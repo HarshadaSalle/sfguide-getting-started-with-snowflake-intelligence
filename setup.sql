@@ -53,7 +53,7 @@ grant create database on account to role snowflake_intelligence_admin;
 grant create integration on account to role snowflake_intelligence_admin;
 
 set current_user = (select current_user());   
-grant role snowflake_intelligence_admin to user identifier($current_user);
+grant role snowflake_intelligence_admin to user identifier($HASHAS);
 alter user set default_role = snowflake_intelligence_admin;
 alter user set default_warehouse = dash_wh_si;
 
